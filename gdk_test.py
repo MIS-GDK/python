@@ -33,3 +33,5 @@ g = (x * x for x in range(1, 11))
 for n in g:
     print(n)
 print(isinstance([], Iterable))
+
+print('1122')
