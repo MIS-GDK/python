@@ -6,3 +6,6 @@ def foo(s):
 
 def main():
     foo('0')
+
+
+print('n is zero')
