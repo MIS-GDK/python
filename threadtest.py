@@ -8,8 +8,9 @@ import time
 def countNum():
     global num
     num += 2
-    print('running on number: %s \r' %num)
+    print('running on number: %s \r' % num)
     time.sleep(1)
+
 
 num = 1000000
 
