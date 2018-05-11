@@ -11,7 +11,7 @@ def countNum():
     print('running on number: %s \r' %num)
     time.sleep(1)
 
-num = 10000
+num = 1000000
 
 if __name__ == '__main__':
     # 生成线程
