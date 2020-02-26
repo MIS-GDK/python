@@ -1,7 +1,7 @@
 # _*_ coding: utf-8 _*_
 import os
 from functools import reduce
-from collections import Iterable
+from collections.abc import Iterable
 # print(os.path.abspath('.'))
 # print(os.environ.get('PATH'))
 # os.mkdir('./testdir')
