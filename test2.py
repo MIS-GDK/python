@@ -10,4 +10,3 @@ def main():
 
 print('n is zero')
 print('n is zero2')
-

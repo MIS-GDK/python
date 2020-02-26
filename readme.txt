@@ -1,2 +1,6 @@
-Creating a new branch is quick&+++++>>>>>simple.
+pip3 install mysql-connector
+pip install aiohttp
 
+new test
+
+git learn again
