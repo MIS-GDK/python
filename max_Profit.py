@@ -1,4 +1,5 @@
 """
+买卖股票的最佳时机
 给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。
 设计一个算法来计算你所能获取的最大利润。你可以尽可能地完成更多的交易（多次买卖一支股票）。
 注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。
@@ -19,7 +20,7 @@
 解释: 在这种情况下, 没有交易完成, 所以最大利润为 0。
 """
 # 贪婪算法
-def maxprofit(prices) -> int:
+def maxprofit(prices):
     profit = 0
     for i in range(len(prices) - 1):
         if prices[i + 1] > prices[i]:
@@ -28,5 +29,33 @@ def maxprofit(prices) -> int:
     return profit
 
 
-print(maxprofit([7, 6, 4, 3, 1]))
+print(maxprofit([1, 2, 3, 4, 5]))
 
+# 动态规划
+def maxprofit2(prices):
+    if len(prices) == 0:
+        return 0
+    n = len(prices)
+
+    dp = [[0 for i in range(2)] for i in range(n)]
+    dp[0][0] = 0
+    dp[0][1] = -prices[0]
+    for i in range(1, n):
+        dp[i][0] = max(dp[i - 1][0], dp[i - 1][1] + prices[i])
+        dp[i][1] = max(dp[i - 1][1], dp[i - 1][0] - prices[i])
+    return dp[n - 1][0]
+
+
+def maxprofit3(prices):
+    if len(prices) == 0:
+        return 0
+    n = len(prices)
+    dp_0 = 0
+    dp_1 = -prices[0]
+    for i in range(1, n):
+        dp_0 = max(dp_0, dp_1 + prices[i])
+        dp_1 = max(dp_1, dp_0 - prices[i])
+    return dp_0
+
+
+print(maxprofit3([1, 2, 3, 4, 5]))
