@@ -10,6 +10,8 @@ class Solution:
         self.head = None
 
     def reverseList(self, head: ListNode) -> ListNode:
+        if not head:
+            return None
         if head.next == None:
             return head
         new_head = self.reverseList(head.next)
@@ -30,6 +32,7 @@ mylist = Solution()
 for i in range(1, 6):
     # print(i)
     my_head = mylist.addnode(i)
+
 
 new_my_head = mylist.reverseList(my_head)
 
