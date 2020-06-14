@@ -47,4 +47,4 @@ def binarysearch2(nums, item):
 
 
 nums = [0, 1, 2, 8, 13, 17, 19, 32, 42]
-print(binarysearch2(nums, 3))
+print(binarysearch2(nums, 13))
