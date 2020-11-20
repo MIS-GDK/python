@@ -6,4 +6,4 @@ def to_str(n, base):
         return to_str(int(n/base), base) + convert_string[n % base]
 
 
-print(to_str(5555548111, 16))
+print(to_str(65535, 2))

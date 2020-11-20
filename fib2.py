@@ -19,6 +19,8 @@ class Fib(object):
 
 
 f = Fib()
-print(f[3])
+# print(f[3])
 # for n in Fib():
 # print(n)
+
+print(2.135*100)
