@@ -3,9 +3,10 @@ import os
 from functools import reduce
 from collections.abc import Iterable
 
-print(os.path.abspath('.'))
-print(os.environ.get('PATH'))
-os.mkdir('./testdir')
+
+print(os.path.abspath("."))
+print(os.environ.get("PATH"))
+os.mkdir("./testdir")
 
 print(
     [
