@@ -40,13 +40,17 @@ class BinHeap:
 
             i = minchild
 
+    def buildHeap(self, alist):
+        i = len(alist) // 2
+        self.currentsize = len(alist)
+        self.heaplist = [0] + alist[:]
+        while i > 0:
+            self.percDown(i)
+            i = i - 1
+
 
 bintree = BinHeap()
-bintree.insert(5)
-bintree.insert(3)
-bintree.insert(10)
-bintree.insert(6)
-bintree.insert(4)
-bintree.insert(2)
 print(bintree.heaplist)
-print(bintree.delMin())
+bintree.buildHeap([9, 5, 6, 2, 3])
+print(bintree.heaplist)
+# print(bintree.delMin())

@@ -16,7 +16,3 @@ def palindrome(str):
 
 
 print(palindrome("aB'dbd,ba"))
-
-a = 'abacfdghj'
-
-print(a[1:-1])

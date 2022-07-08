@@ -15,4 +15,4 @@ def add_single_quotes(address, filename):
             f.write("\n")
 
 
-add_single_quotes("C:/Users/Administrator/Desktop", "result.txt")
+add_single_quotes("C:/Users/Administrator/Desktop", "1.txt")

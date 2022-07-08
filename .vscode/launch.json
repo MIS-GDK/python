@@ -8,7 +8,8 @@
             "name": "Python",
             "type": "python",
             "request": "launch",
-            "program": "${file}"
+            "program": "${file}",
+            "justMyCode": false
         },
         {
             "name": "Python: Attach",
@@ -97,7 +98,7 @@
             "type": "python",
             "request": "launch",
             "python": "${command:python.interpreterPath}",
-            "pythonPath": "${config:python.interpreterPath}",
+            "python": "${command:python.interpreterPath}",
             "program": "${file}",
             "module": "module.name",
             "env": {
@@ -111,7 +112,8 @@
             ],
             "debugOptions": [
                 "RedirectOutput"
-            ]
+            ],
+            "justMyCode": false
         }
     ]
 }

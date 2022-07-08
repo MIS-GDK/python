@@ -10,7 +10,7 @@ def pass_random_md5():
     user_list = []
     global Pass_result
     punctuation = string.punctuation
-    punctuation = punctuation.replace("&", "")
+    punctuation = punctuation.replace("&", "").replace('"', "")
     for i in range(16):
         Your_pass = random.choice(string.ascii_letters + string.digits + punctuation)
         user_list.append(Your_pass)
